@@ -1,12 +1,20 @@
 
 import './App.css';
-
+import Newtransaction from './components/Newtransaction'
+import Header from './components/Header'
+import { Transactionlist } from './components/Transactionlist';
+import {IncomeExpense} from './components/IncomeExpense'
+import { Balance } from './components/Balance';
 function App() {
   return (
     <div >
-      <p>
-        this is the expense tracker
-      </p>
+
+      <Header/>
+      <Balance/>
+      <IncomeExpense/>
+      <Transactionlist/>
+      <Newtransaction/>
+      
 
     </div>
   );
