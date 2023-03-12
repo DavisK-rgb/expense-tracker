@@ -5,18 +5,21 @@ import Header from './components/Header'
 import { Transactionlist } from './components/Transactionlist';
 import {IncomeExpense} from './components/IncomeExpense'
 import { Balance } from './components/Balance';
+import Stateprovider from './context/Stateprovider'
 function App() {
   return (
-    <div >
+    
+    <Stateprovider>
 
       <Header/>
       <Balance/>
       <IncomeExpense/>
       <Transactionlist/>
       <Newtransaction/>
-      
-
-    </div>
+            
+    </Stateprovider>
+     
+ 
   );
 }
 

@@ -1,18 +1,30 @@
-import React from 'react'
-import {delTransaction} from './delTransaction'
+import React,{useContext} from 'react'
+import { DelTransaction } from './DelTransaction';
+import {GlobalContext} from '../context/Stateprovider'
 
 const Transaction = () => {
+    
+    const {state} = useContext(GlobalContext)
+    console.log(state);
     return (
-        <li>
-            <div>
+        <div>
+             {state.transactions.map((transaction)=>{
+            return ( <li key={transaction.id}>
+           
+                <div>
+    
+                <DelTransaction id={transaction.id}/>
+                <p>{transaction.text}</p>
+                <p>{transaction.amount}</p>
+               
+    
+                </div>
                 
-            <delTransaction/>
-            <p>salary</p>
-            <p>500</p>
-
-            </div>
-            
-        </li>
+            </li>)
+        })}
+        </div>
+       
+       
     )
 }
 export default Transaction;

@@ -1,10 +1,11 @@
-import React from 'react'
-
-export const delTransaction = () => {
+import React,{useContext} from 'react'
+import {GlobalContext} from '../context/Stateprovider'
+export const DelTransaction = ({id}) => {
+const {deleteTransaction} = useContext(GlobalContext);
     return (
         <div>
-            <input type="button"  value="X"/>
-            <h1>X</h1>
+            <input type="button"  value="X" onClick={()=>{deleteTransaction(id)}}/>
+            
         </div>
     )
 }
