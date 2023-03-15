@@ -11,7 +11,7 @@ const Newtransaction = () => {
     
     const [text,setText] = useState('');
     const [amount,setAmount] = useState('');
-    const trans = {text,amount};
+    const trans = {text,amount:+amount};
     const submitHandler =(e)=>{
         e.preventDefault();
        addTransaction(trans);

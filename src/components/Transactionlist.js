@@ -5,6 +5,7 @@ export const Transactionlist = () => {
 
     return (
         <div>
+            <h3>TRANSACTIONS</h3>
             <ul>
 
                 <Transaction/>
